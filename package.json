@@ -1,0 +1,47 @@
+{
+  "name": "io.cordova.hellocordova",
+  "displayName": "HelloCordova",
+  "version": "1.0.0",
+  "description": "A sample Apache Cordova application that responds to the deviceready event.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "author": "Apache Cordova Team",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "cordova-android": "^9.1.0",
+    "cordova-browser": "^6.0.0",
+    "cordova-plugin-browsertab": "github:bthaw2018/cordova-plugin-browsertab",
+    "cordova-plugin-screen-orientation": "^3.0.2",
+    "cordova-plugin-whitelist": "^1.3.4",
+    "cordova-universal-links-plugin": "github:cgaeking/cordova-universal-links-plugin-fix",
+    "es6-promise-plugin": "^4.2.2"
+  },
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-buildinfo": {},
+      "cordova-plugin-inappbrowser": {},
+      "cordova-plugin-browsertab": {
+        "CUSTOM_TAB_COLOR_RGB": "#ffffff"
+      },
+      "cordova-universal-links-plugin": {},
+      "cordova-plugin-screen-orientation": {}
+    },
+    "platforms": [
+      "android",
+      "browser"
+    ]
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "cordova-plugin-buildinfo": "4.0.0",
+    "cordova-plugin-inappbrowser": "5.0.0",
+    "cordova-universal-links-plugin-fix": "1.2.1",
+    "firebase": "^9.6.0"
+  }
+}

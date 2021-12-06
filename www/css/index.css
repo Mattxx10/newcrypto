@@ -1,0 +1,163 @@
+@font-face {
+    font-family: 'electro';
+    src: url('../fonts/electro.ttf');
+  }
+
+body{
+    margin: 0;
+    background: rgb(2,0,36);
+    background: radial-gradient(circle, rgba(2,0,36,1) 21%, rgba(3,0,73,1) 100%);
+    justify-content: center;
+}
+
+.app-header{
+    font-family: electro;
+    font-size: 50px;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    letter-spacing: 2px;
+}
+
+#signin{
+    width: 300px;
+    position: absolute;
+    left: 50%;
+    margin-left: -150px;
+    border-radius: 25px;
+}
+
+#google{
+    width: 70px;
+    height: 70px;
+    position: fixed;
+    left: 50%;
+    top: 400px;
+    margin-left: -35px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid white;
+    box-shadow: 0px 0px 5px black;
+}
+
+.googlelogo{
+    width: 30px;
+    height: 30px;
+}
+
+.currency-container{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 95%;
+    height: 100px;
+    border: 1px solid white;
+    background-color: rgba(0, 0, 0, 0.349);
+    box-shadow: 0px 0px 5px black;
+    color: white;
+    border-radius: 10px;
+}
+
+.currency-name{
+    font-size: 18px;
+    position: relative;
+    top: -10px;
+    left: 10px;
+}
+
+.currency-id{
+    position: absolute;
+    top: 20px;
+    left: 10px;
+}
+
+.current-price{
+    text-align: left;
+    font-size: 20px;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+}
+
+#currency-list{
+    padding: 0;
+    margin: 0;
+    margin-bottom: 70px;
+}
+
+.volume{
+    position: relative;
+    top: 60px;
+    left: 10px;
+}
+
+.nav-btm{
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    height: 50px;
+    background-color: rgba(0, 0, 7, 0.801);
+}
+
+.nav-btm img{
+    padding-top: 5px;
+    height: 30px;
+    width: auto;
+}
+
+.search-icon{
+    position: absolute;
+    left: 20px;
+}
+
+.home-icon{
+    position: absolute;
+    left: 50%;
+    margin-left: -25px;
+}
+
+.profile-icon{
+    position: absolute;
+    right: 20px;
+}
+
+#popup-menu{
+    display: none;
+    font-size: 25;
+    position: fixed;
+    z-index: 4;
+    color: white;
+    background-color: black;
+    right: 0;
+    bottom: 50px;
+    padding: 10px;
+}
+
+.login-form{
+    width: 300px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.login-form input{
+    color:white;
+    background-color: rgba(2, 0, 36, 0);
+    font-size: 18px;
+    border-radius: 20px;
+    border: none;
+    border: 1px solid rgb(121, 121, 121);
+    width: 290px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+.login{
+    width: 300px;
+    height: 45px;
+    border-radius: 22.5px;
+}
