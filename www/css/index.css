@@ -3,10 +3,15 @@
     src: url('../fonts/electro.ttf');
   }
 
+@font-face {
+    font-family: 'poppin';
+    src: url('../fonts/Poppins-Regular.ttf');
+  }
+
 body{
+    padding-top:60px;
     margin: 0;
-    background: rgb(2,0,36);
-    background: radial-gradient(circle, rgba(2,0,36,1) 21%, rgba(3,0,73,1) 100%);
+    background: rgb(34, 34, 34);
     justify-content: center;
 }
 
@@ -21,7 +26,20 @@ body{
     letter-spacing: 2px;
 }
 
+#fav-header{
+    font-family: "poppin";
+    text-align: center;
+    position: absolute;
+    top: -15px;
+    color: white;
+    display: none;
+    left: 30px;
+}
+
+
 #signin{
+    height: 45px;
+    font-family: "poppin";
     width: 300px;
     position: absolute;
     left: 50%;
@@ -29,17 +47,26 @@ body{
     border-radius: 25px;
 }
 
+.register{
+    font-family: "poppin";
+    width: 300px;
+    height: 45px;
+    border-radius: 22.5px;
+    margin-top: 20px;
+}
+
 #google{
     width: 70px;
     height: 70px;
     position: fixed;
     left: 50%;
-    top: 400px;
+    top: 500px;
     margin-left: -35px;
     border-radius: 50%;
     background-color: rgba(0, 0, 0, 0);
     border: 2px solid white;
     box-shadow: 0px 0px 5px black;
+    z-index: 2;
 }
 
 .googlelogo{
@@ -54,15 +81,15 @@ body{
     margin-top: 10px;
     margin-bottom: 10px;
     width: 95%;
-    height: 100px;
-    border: 1px solid white;
-    background-color: rgba(0, 0, 0, 0.349);
+    height: 70px;
+    background-color: rgba(0, 0, 0, 0.849);
     box-shadow: 0px 0px 5px black;
     color: white;
     border-radius: 10px;
 }
 
 .currency-name{
+    font-family: 'poppin';
     font-size: 18px;
     position: relative;
     top: -10px;
@@ -70,59 +97,103 @@ body{
 }
 
 .currency-id{
+    font-family: 'poppin';
     position: absolute;
-    top: 20px;
+    top: 5px;
     left: 10px;
 }
 
-.current-price{
+#change{
+    font-family: 'poppin';
     text-align: left;
-    font-size: 20px;
+    font-size: 18px;
     position: absolute;
-    top: 20px;
+    top: 30px;
+    right: 45px;
+}
+
+.add-fav{
+    font-family: 'poppin';
+    text-align: left;
+    font-size: 35px;
+    position: absolute;
+    top: 10px;
     right: 10px;
 }
 
+.red{
+    color:rgb(250, 0, 0);
+}
+
+.green{
+    color: rgb(21, 184, 0);
+}
+
+.home{
+    padding-top: 60px;
+}
+
+.current-price{
+    font-family: 'poppin';
+    text-align: left;
+    font-size: 20px;
+    position: absolute;
+    top: 5px;
+    right: 45px;
+}
+
 #currency-list{
+    padding-top: 50px;
     padding: 0;
     margin: 0;
-    margin-bottom: 70px;
+    margin-bottom: 55px;
+}
+
+#favorites-list{
+    padding-top: 50px;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 55px;
+    display: none;
 }
 
 .volume{
+    font-family: 'poppin';
     position: relative;
-    top: 60px;
+    top: 30px;
     left: 10px;
 }
 
 .nav-btm{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     width: 100%;
     position: fixed;
     bottom: 0px;
-    height: 50px;
-    background-color: rgba(0, 0, 7, 0.801);
+    height: 45px;
+    background-color: rgb(0, 0, 0);
 }
 
 .nav-btm img{
-    padding-top: 5px;
+    margin-top:8px;
     height: 30px;
     width: auto;
 }
 
 .search-icon{
     position: absolute;
-    left: 20px;
+    left: 50px;
 }
 
 .home-icon{
     position: absolute;
     left: 50%;
-    margin-left: -25px;
+    margin-left: -15px;
 }
 
 .profile-icon{
     position: absolute;
-    right: 20px;
+    right: 50px;
 }
 
 #popup-menu{
@@ -157,7 +228,86 @@ body{
 }
 
 .login{
+    font-family: "poppin";
     width: 300px;
     height: 45px;
     border-radius: 22.5px;
+}
+
+#search{
+    padding-left: 10px;
+    height:40px;
+    border-radius: 20px;
+    font-size: 20px;
+    position: fixed;
+    top: 10px;
+    width: 280px;
+    left: 50%;
+    margin-left: -140px;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.79);
+    color: white;
+    border: 2px solid rgb(233, 206, 0);
+}
+
+#register-form{
+    display: none;
+    height: 350px;
+    width: 350px;
+    position: fixed;
+    top: 100px;
+    left:50%;
+    margin-left:-175px;
+    background-color: black;
+    z-index: 3;
+    border-radius: 20px;
+    text-align: center;
+    font-family: "poppin";
+}
+
+#register-form input{
+    margin-left: 50%;
+    transform: translate(-150px);
+    color:white;
+    background-color: rgba(2, 0, 36, 0);
+    font-size: 18px;
+    border-radius: 20px;
+    border: none;
+    border: 1px solid rgb(121, 121, 121);
+    width: 290px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+.register-header{
+    color: white;
+}
+
+#close{
+    font-size: 20px;
+    font-family: "poppin";
+    color: white;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+}
+
+.register-signin{
+    font-family: "poppin";
+    width: 300px;
+    height: 45px;
+    border-radius: 22.5px;
+}
+
+#err-msg{
+    color: white;
+}
+
+.search-page{
+    display: block;
+}
+
+#home-page{
+    display:none;
 }

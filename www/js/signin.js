@@ -1,5 +1,5 @@
 function dosignin() {
-
+  console.log("here");
   //Clear Content
   document.getElementById("content").innerHTML = "";
 
@@ -7,9 +7,22 @@ function dosignin() {
   btn.setAttribute('id', 'google');
   btn.innerHTML = '<img class="googlelogo" src="img/googlelogo.png" />';
   btn.onclick = toggleSignIn;
-
+  
   document.getElementById("content").appendChild(btn);
 
+}
+
+var userid;
+
+function signInWithEmail(){
+  var password = document.getElementById("password").value;
+  var email = document.getElementById("email").value;
+  firebase.auth().signInWithEmailAndPassword(email, password)
+  .then(function(result) {
+    console.log(result.user.email);
+  }).catch(function(error) {
+    // Handle error.
+  });
 }
 
 function handleAuthError(error) {

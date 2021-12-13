@@ -38,6 +38,7 @@
         <title>Hello World</title>
         <script src="js/currencies.js"></script>
         <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
         <script src="./js/firebase_creds.js"></script>
         <!-- Load Firebase Services -->
         <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
@@ -48,23 +49,56 @@
         
     </head>
     <body>
+        
         <script src="cordova.js"></script>
         <script src="js/index.js"></script>
         <script src="js/signin.js"></script>
+        <script src="js/register.js"></script>
 
-       <h1 class="app-header animate__animated animate__fadeInDown">CryptoNow</h1>
-       <form class="login-form">
-        <input type="text" id="email" name="email" placeholder="Email"><br><br>
-        <input type="text" id="password" name="password" placeholder="Password"><br><br>
-        <button class="login">login</button>
-      </form>
-        <button id="signin">
-            <p id="signintext">Other Sign-In Options</p>
-        </button>
-        <div id="content">
+       
+        <div id="home-page">
+            <input class="search-page" type="text" id="search" name="search" placeholder="Search">
+            <div id="currency-list" class="search-page">
+                </div>
+                <h1 id="fav-header">My Cryptos</h1>
+                <div id="favorites-list">
+                </div>
+                <div class="nav-btm search-page">
+                    <img onclick="doSearch()" class="search-icon" src="img/search.png">
+                    <img onclick="doFavorites()" class="home-icon" src="img/home.png">
+                    <img class="profile-icon" onclick="togglePopUpMenu()" src="img/profile.png">
+                </div>
+                <div id="popup-menu">
+                    <div id="signout" onclick="signout()">Sign-out</div>
+                </div>
         </div>
 
-        <div class="photo"></div>
-        
+       <div id="signin-page">
+                <h1 class="app-header animate__animated animate__fadeInDown">CryptoNow</h1>
+            <div class="sigin-in-page login-form">
+                    <input type="text" id="email" name="email" placeholder="Email"><br><br>
+                    <input type="password" id="password" name="password" placeholder="Password"><br><br>
+                    <button id="login" class="login">login</button>
+                    <button id="register" class="register">register</button>
+            </div>
+
+            <div id="register-form" class="animate__animated animate__fadeInDown">
+                    <div id="close" onclick="closeRegisterForm();">X</div>
+                    <h1 class="register-header">Register</h1>
+                    <input type="text" id="register-email" name="register-email" placeholder="Email"><br><br>
+                    <input type="password" id="register-password" name="register-password" placeholder="Password"><br><br>
+                    <button id="register-signin" class="register-signin">Register & Sign-In</button>
+                    <p id="err-msg"></p>
+            </div>
+                
+            <button id="signin">
+                    <p id="signintext">Other Sign-In Options</p>
+                </button>
+                
+                <div id="content">
+                </div>
+
+                <div class="photo"></div>
+        </div>
     </body>
 </html>

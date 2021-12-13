@@ -1,6 +1,7 @@
 var firebaseConfig = {
     apiKey: "AIzaSyBMZ80c9g64lE7RZhoU4rNCURjyPTmXBKA",
     authDomain: "crypto-926cf.firebaseapp.com",
+    databaseURL: "https://crypto-926cf-default-rtdb.firebaseio.com",
     projectId: "crypto-926cf",
     storageBucket: "crypto-926cf.appspot.com",
     messagingSenderId: "1010683071524",
